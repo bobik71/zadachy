@@ -1,0 +1,17 @@
+n, a, b = map(int,input().split())
+q = []
+s = 0
+k1 = a - 1
+k2 = b - a - 1
+k3 = n - b
+if k1 < k2 and k3 < k2:
+    s = k2 // 2 + 1
+    if s < k1:
+        s += k1-s-1
+    if s < k2:
+        s += k2-s-1
+elif k1>k3:
+    s = a - 1
+else:
+    s = n - b
+print(s)

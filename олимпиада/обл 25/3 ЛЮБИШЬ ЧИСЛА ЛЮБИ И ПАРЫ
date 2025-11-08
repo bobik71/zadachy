@@ -1,0 +1,29 @@
+def pc(n):
+    s = 0
+    for i in range(2,n):
+        if n % i == 0:
+            s += 1
+    if s == 0:
+        return(True)
+    else:
+        return(False)
+    
+def npc(n):
+    s = 0
+    i = 0
+    while n >= 0:
+        i += 1
+        if pc(i):
+            s+=1
+            if s == n:
+                return(i)
+
+s = 0
+n, np = map(int,input().split())
+q = list(map(int,input().split()))
+for i in range(n):
+    for j in range(i+1,n):
+        m = q[i]+q[j]
+        if m == npc(np+1):
+            s += 1
+print(s)

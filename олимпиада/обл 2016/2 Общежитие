@@ -1,0 +1,15 @@
+n = int(input())
+a = list(map(int,input().split()))
+s1 = {}
+s = 0
+for i in range(len(a)):
+    if a[i] in s1:
+        s1[a[i]] += 1
+    else:
+        s1[a[i]] = 1
+for i in s1:
+    if s1[i] % 2 == 1:
+        s += 1
+
+print(s)
+

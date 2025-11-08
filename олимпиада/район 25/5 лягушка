@@ -1,0 +1,12 @@
+l, r = map(int,input().split())
+k, x = map(int,input().split())
+s = k
+s1 = 0
+while s1 < l and s1 < r:
+    s1 += s
+    s += x
+if s1 <= r:
+    print('Yes')
+else:
+    print('No')
+print(s1)

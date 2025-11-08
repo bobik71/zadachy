@@ -1,0 +1,15 @@
+n, m = map(int,input().split())
+a, b = map(int,input().split())
+s = 0
+s1 = 0
+p1 = a//2 + b//2
+if p1 >= m:
+    s += m
+else:
+    s += p1
+p2 = a + b - 2 * s
+if p2 >= n:
+    s1 += n
+else:
+    s1 += p2
+print(s*2 + s1)

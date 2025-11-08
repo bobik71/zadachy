@@ -1,0 +1,7 @@
+x = int(input())
+a, b, c = map(int,input().split())
+s1 = a * (b + 1) + b *(a + 1)
+s2 = 2 * s1
+s3 = (b + 1) * (a + 1)
+s4 = (a +b)*2*(c-1)
+print(s2+s3*c+s4)

@@ -1,0 +1,19 @@
+t = int(input())
+for j in range(t):
+    o = 0
+    s = 1
+    n = int(input())
+    a = list(map(int,input().split()))
+    a1 = []
+    m = a[0]
+    for i in range(n):
+        k = a[i]
+        if m >= k:
+            m = k
+            o = i
+    a[o] += 1
+    print(a,o,m)
+    for i in range(n):
+        k1 = a[i]
+        s *= k1
+    print(s)

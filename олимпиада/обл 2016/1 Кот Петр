@@ -1,0 +1,17 @@
+x = int(input())
+y = int(input())
+d = y - x  
+
+if d < 0:
+    print(-1)  
+else:
+    for i in range(d // 6 + 1): 
+        r = d - 6 * i    
+        for j in range(r // 2 + 1):  
+            if (r - 2 * j) % 3 == 0:  
+                b = (r - 2 * j) // 3
+                if b >= 0:  
+                    t = j + b + i  
+                    print(t)  
+                    exit()
+print(-1)  
